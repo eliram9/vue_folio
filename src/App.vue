@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <h1>Hi</h1>
+    <FirstScreen />
   </div>
 </template>
 
 <script>
-
+import FirstScreen from './components/FirstScreen'
 
 export default {
   name: 'app',
   components: {
-
+    FirstScreen
   }
 }
 </script>

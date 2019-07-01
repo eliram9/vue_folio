@@ -2,12 +2,13 @@
   <div>
     <h1>Hello, I'm Eliram</h1>
     <h1>I'm a Fronf-End & UI/UX Developer</h1>
+    
   </div>
 </template>
 
 <script>
 export default {
-  name: 'FirstScreen,
+  name: 'FirstScreen',
   props: {
     msg: String
   }
