@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <p>I did it!</p>
     <FirstScreen />
   </div>
 </template>
