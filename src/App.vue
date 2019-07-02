@@ -1,27 +1,38 @@
 <template>
   <div id="app">
     <FirstScreen />
-    <hr />
-        <br />
+    <Toolbar />
     <About />
         <br />
     <hr />
         <br />
-    <Projects />    
+    <Projects />
+    <hr />
+        <br />
+    <contact /> 
+    <hr />
+        <br />
+    <Footer />         
   </div>
 </template>
 
 <script>
 import FirstScreen from './components/FirstScreen'
+import Toolbar from './components/Toolbar'
 import About from './components/About'
 import Projects from './components/Projects'
+import Contact from './components/Contact'
+import Footer from './components/Footer'
 
 export default {
   name: 'app',
   components: {
     FirstScreen,
+    Toolbar,
     About,
-    Projects
+    Projects,
+    Contact,
+    Footer
   }
 }
 </script>
