@@ -3,7 +3,7 @@
         <v-container fill-height>
             <v-layout row wrap align-center>
                 <v-flex class="text-xs-center"> 
-                    <h1>Hello, I'm Eliramm</h1>
+                    <h1>Hello, I'm Eliram</h1>
                     <h1>I'm a Front-End & UI/UX Developer</h1>
                 <br />    
                     <v-btn>Hi</v-btn>
