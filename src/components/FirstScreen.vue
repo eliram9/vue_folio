@@ -1,34 +1,38 @@
 <template>
-  <div>
-    <h1>Hello, I'm Eliram</h1>
-    <h1>I'm a Fronf-End & UI/UX Developer</h1>
-    
-  </div>
+    <div class="first">
+        <v-container fill-height>
+            <v-layout row wrap align-center>
+                <v-flex class="text-xs-center"> 
+                    <h1>Hello, I'm Eliram</h1>
+                    <h1>I'm a Front-End & UI/UX Developer</h1>
+                <br />    
+                    <v-btn>Hi</v-btn>
+                </v-flex>
+            </v-layout>
+        </v-container>
+    </div>
 </template>
 
 <script>
 export default {
-  name: 'FirstScreen',
-  props: {
-    msg: String
-  }
+    name: 'FirstScreen',
+    props: {
+        msg: String
+    }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+    .first {
+        height: 100vh;
+        background-color: pink;
+    }
+    
+    h1 {
+        color: blue;
+        font-size: 3vmax;
+        font-weight: 200;
+        font-family: 'Josefin Slab', serif;
+    }
 </style>

@@ -1,16 +1,27 @@
 <template>
   <div id="app">
     <FirstScreen />
+    <hr />
+        <br />
+    <About />
+        <br />
+    <hr />
+        <br />
+    <Projects />    
   </div>
 </template>
 
 <script>
 import FirstScreen from './components/FirstScreen'
+import About from './components/About'
+import Projects from './components/Projects'
 
 export default {
   name: 'app',
   components: {
-    FirstScreen
+    FirstScreen,
+    About,
+    Projects
   }
 }
 </script>
@@ -22,6 +33,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
