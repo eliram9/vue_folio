@@ -6,7 +6,7 @@
                     <h1>Hello, I'm Eliram</h1>
                     <h1>I'm a Front-End & UI/UX Developer</h1>
                 <br>    
-                    <v-btn>Explore</v-btn>
+                    <v-btn style="color:red">Explore</v-btn>
                 </v-flex>
             </v-layout>
         </v-container>
