@@ -5,7 +5,7 @@
                 <v-flex class="text-xs-center"> 
                     <h1>Hello, I'm Eliram</h1>
                     <h1>I'm a Front-End & UI/UX Developer</h1>
-                <br />    
+                <br>    
                     <v-btn>Explore</v-btn>
                 </v-flex>
             </v-layout>
@@ -33,6 +33,6 @@ export default {
         color: blue;
         font-size: 3vmax;
         font-weight: 200;
-        font-family: 'Josefin Slab', serif;
+        font-family: 'Dosis', sans-serif;
     }
 </style>

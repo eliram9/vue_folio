@@ -1,5 +1,9 @@
 <template>
-    <h1>eliram9</h1>
+    <v-footer inverted-scroll>
+        <v-layout justify-center row wrap>
+                <div>eliram9 &copy; {{ new Date().getFullYear() }}</div>
+        </v-layout>
+    </v-footer>
 </template>
 
 <script>
