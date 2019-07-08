@@ -3,7 +3,7 @@
         <v-container fill-height>
             <v-layout row wrap align-center>
                 <v-flex class="text-xs-center"> 
-                    <h1>Hello, I'm Eliram</h1>
+                    <h1>Hello, I'm Elir<span class="a">a</span>m M<span class="a">a</span>l<span class="a">a</span>chi.</h1>
                     <h1>I'm a Front-End & UI/UX Developer</h1>
                 <br>    
                     <v-btn style="color:red">Explore</v-btn>
@@ -14,25 +14,26 @@
 </template>
 
 <script>
-export default {
-    name: 'FirstScreen',
-    props: {
-        msg: String
+    export default {
+        name: 'FirstScreen',
     }
-}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
     .first {
         height: 100vh;
-        background-color: pink;
+        background-color: #F9FBE7;
     }
     
     h1 {
-        color: blue;
+        color: #78909C;
         font-size: 3vmax;
         font-weight: 200;
         font-family: 'Dosis', sans-serif;
+    }
+
+    .a {
+        color: #FFAB91;
     }
 </style>
