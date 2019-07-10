@@ -1,6 +1,8 @@
 <template>
-    <div>
-        <h2>Projects</h2>
+    <div id="projects">
+        <h2 class="display-3">Projects</h2>
+        <br />
+        
             <v-container fluid>
                 <v-layout justify-center>
                     <v-flex xs12 sm12 md10 lg8 xl6>
@@ -70,9 +72,10 @@ export default {
 </script>
 
 <style scoped>
-    /* .timeLine{
-        justify-content: center;
-    } */
+    #projects {
+        height: 100%;
+        background-color: #fefffa;
+    }
 
     img{
         width: 15vmax;

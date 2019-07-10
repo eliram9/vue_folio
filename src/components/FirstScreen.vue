@@ -1,5 +1,6 @@
 <template>
-    <div class="first">
+    <div id="first">
+
         <v-container fill-height>
             <v-layout row wrap align-center>
                 <v-flex class="text-xs-center"> 
@@ -10,20 +11,27 @@
                 </v-flex>
             </v-layout>
         </v-container>
+        
     </div>
 </template>
 
 <script>
     export default {
         name: 'FirstScreen',
+
+        data() {
+            return {
+                url: 'https://www.google.com'
+            }
+        }
     }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-    .first {
+    #first {
         height: 100vh;
-        background-color: #F9FBE7;
+        background-color: #fefffa;
     }
     
     h1 {
