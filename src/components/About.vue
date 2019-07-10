@@ -2,18 +2,20 @@
     <div id="about">
         <h2 class="display-3">About</h2>
             <v-container fluid>
-                <v-layout row>
-                        <v-flex xs12 lg6 xl5> 
-                            <v-card flat color="#F1F8E9">
+                <v-layout row align-center>
+                        <v-flex xs10 lg6 xl5> 
+                            <v-card flat color="#fefffa">
                                 <a><img src="../assets/me.png" alt="me"></a>
                             </v-card>   
                         </v-flex>
 
                         <v-flex xs12 lg5 xl6> 
-                            <v-card flat>
-                                <h1>I'm Eliram Malachi,</h1>
-                        <br>
-                                <h1>A Front-End & UI/UX Developer Entrepreneur with Engineering, Consulting and Management Experience. </h1>    
+                            <v-card flat color="#fefffa">
+                                <h1>I'm Eliram,</h1>
+                                <h1>A Front-End & UI/UX Developer. 
+                                    <br>
+                                    Entrepreneur with Engineering, Consulting and Management Experience.
+                                </h1>    
                             </v-card>   
                         </v-flex>
                 </v-layout>
@@ -21,13 +23,18 @@
 
             <div class="showMore">
                 <v-container align-center>
-                        <v-btn outline large round @click="toggle">Show {{ showMore ? 'Less' : 'More' }}</v-btn>
+                        <v-btn outline 
+                               large 
+                               round 
+                               color="#4DB6AC"
+                               @click="toggle">Show {{ showMore ? 'Less' : 'More' }}
+                        </v-btn>
                     <br />
 
                         <!-- Technologies section -->
                             <v-layout justify-center>
                                 <v-flex xs12 sm12 md10 lg8 xl7>
-                                    <v-card color="#fefffa" v-if="showMore">
+                                    <v-card flat color="#fefffa" v-if="showMore">
                                         <br>
                                         <h1  class="technologies">{{ techo }}</h1>
                                             <br>
@@ -80,8 +87,11 @@
                     
                         <!-- Download option -->
                         <br> 
-                        <v-btn outline round color="indigo" 
-                               v-if="showMore" a href="/myResume.pdf" 
+                        <v-btn outline 
+                               round 
+                               color="#FF8A65" 
+                               v-if="showMore" 
+                               a href="/myResume.pdf" 
                                download="Eliram Malachi - Resume.pdf">
                                 View / Download Resume
                         </v-btn>
@@ -109,11 +119,21 @@ export default {
 <style scoped>
     #about {
         min-height: 95vh;
-        background-color: darkseagreen !important;
+        background-color: #fefffa !important;
+    }
+
+    .display-3 {
+        font-family: 'Poiret One', cursive !important;
     }
 
     img {
         width: 25vmax;
+    }
+
+    h1 {
+        font-size: 2.9vmax;
+        font-family: 'Dosis', sans-serif;
+        font-weight: 100;
     }
 
     /* Technologies */

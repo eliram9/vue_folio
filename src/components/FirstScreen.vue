@@ -4,10 +4,24 @@
         <v-container fill-height>
             <v-layout row wrap align-center>
                 <v-flex class="text-xs-center"> 
-                    <h1>Hello, I'm Elir<span class="a">a</span>m M<span class="a">a</span>l<span class="a">a</span>chi.</h1>
+                    <h1>Hello, I'm <span class="name">Elir</span>
+                                   <span class="a">a</span>
+                                   <span class="name">m M</span>
+                                   <span class="a">a</span>
+                                   <span class="name">l</span>
+                                   <span class="a">a</span>
+                                   <span class="name">chi</span>.
+                    </h1>
                     <h1>I'm a Front-End & UI/UX Developer</h1>
                 <br>    
-                    <v-btn style="color:red">Explore</v-btn>
+                    <v-btn large 
+                           outline
+                           fab 
+                           href="#about" 
+                           color="blue-grey lighten-1"
+                           class="explore">
+                           Explore
+                    </v-btn>
                 </v-flex>
             </v-layout>
         </v-container>
@@ -41,7 +55,15 @@
         font-family: 'Dosis', sans-serif;
     }
 
+    .name{
+        color: #B2DFDB;
+    }
+
     .a {
         color: #FFAB91;
     }
+
+    /* .explore:hover {
+        font-size: 20vmax;
+    } */
 </style>

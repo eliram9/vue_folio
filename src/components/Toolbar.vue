@@ -3,10 +3,9 @@
         <v-toolbar inverted-scroll app color="blue-grey lighten-2">
             <v-toolbar-title>E<span class="M">M</span></v-toolbar-title>
                 <v-toolbar-items>
-                    <v-btn round flat class="btn">About</v-btn>
-                    <v-btn round flat class="btn">Projects</v-btn>
-                    <v-btn round flat class="btn">Contact</v-btn> 
-                    <a href="http://www.google.com"><v-btn round flat>google</v-btn></a>
+                    <v-btn round flat href="#about" class="btn">About</v-btn>
+                    <v-btn round flat href="#projects" class="btn">Projects</v-btn>
+                    <v-btn round flat href="#contact" class="btn">Contact</v-btn> 
                 </v-toolbar-items>
         </v-toolbar>
     </div>    
@@ -42,12 +41,9 @@ export default {
         font-weight: 600;
         font-family: 'Poiret One', cursive;
     } 
-    .btn:hover{
+    .btn:hover {
         background-color: rgba(255, 171, 145, 0.342);
         color: white;
-
-        -webkit-transform: rotateZ(-30deg);
-        -ms-transform: rotateZ(-30deg);
         transform: rotateZ(-30deg);
     }  
 </style>

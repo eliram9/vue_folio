@@ -1,11 +1,16 @@
 <template>
     <div id=contact>
         <h2 class="display-3">Contact</h2>
-        <br />
-        <a v-bind:href="github"><img src="../assets/git.png" alt="git"></a>
-        <a :href="linkedin"><img src="../assets/linked.png"></a>
-        <a :href="instagram"><img src="../assets/insta.png"></a>
-        <img src="../assets/mail.png">
+            <v-container fill-height>
+                <v-layout >
+                    <v-flex>
+                        <a v-bind:href="github"><img src="../assets/git.png" alt="git"></a>
+                        <a :href="linkedin"><img src="../assets/linked.png"></a>
+                        <a :href="instagram"><img src="../assets/insta.png"></a>
+                        <img src="../assets/mail.png">
+                    </v-flex>
+                </v-layout>
+            </v-container>
     </div>
 </template>
 
@@ -23,9 +28,14 @@ export default {
 
 <style scoped>
     #contact {
-        height: 50vh;
+        min-height: 22vh;
         background-color: #fefffa;
     }
+
+    .display-3 {
+        font-family: 'Poiret One', cursive !important;
+    }
+
     img {
         max-width: 3.5vmax;
         margin: 1% 1%;

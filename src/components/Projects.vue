@@ -77,6 +77,11 @@ export default {
         background-color: #fefffa;
     }
 
+    .display-3 {
+        font-family: 'Poiret One', cursive !important;
+        float: left;
+    }
+
     img{
         width: 15vmax;
     }
