@@ -24,9 +24,10 @@
                                         </v-card-text>
 
                                         <p>built with</p>
-                                        <img class="img-build" 
-                                             v-bind:src="project.tools"
-                                        >
+                                        <span v-for="tool in project.tools" :key=tool>
+                                            <img class="img-build" 
+                                                v-bind:src="tool" />
+                                        </span>
 
                                         <br>
                                     </v-card> 
@@ -37,7 +38,7 @@
                             </v-timeline-item>
                         </v-timeline>
                     </v-flex>
-                </v-layout>    
+                </v-layout>             
             </v-container>
     </div>    
 </template>
@@ -50,26 +51,46 @@ export default {
                 {
                     name: 'CryptoReact',
                     img: require('../assets/crypto.png'),
-                    tools: require('../assets/css.png'), 
+                    tools: [
+                            require('../assets/react.png'),
+                            require('../assets/api.png'),
+                            require('../assets/mate1.png')
+                    ], 
                     description: 'amazing',
                     link: 'https://eliram9.github.io/cryptoreact/'
                 },
                 {
                     name: 'Cryptocurrrnecy',
                     img: require('../assets/oldCrypto.png'),
-                    tools: require('../assets/react.png'),
+                    tools: [
+                            require('../assets/html.png'),
+                            require('../assets/css.png'),
+                            require('../assets/js.png'),
+                            require('../assets/api.png'),
+                            require('../assets/boot.png')    
+                    ],
                     description: 'old',
                     link: 'https://eliram9.github.io/crypto/'
                 },
                 {
                     name: 'QuickestWay',
                     img: require('../assets/navi.png'),
+                    tools: [
+                            require('../assets/html.png'),
+                            require('../assets/css.png'),
+                            require('../assets/js.png'),
+                            require('../assets/api.png'),
+                            require('../assets/boot.png')    
+                    ],
                     description: 'fast',
                     link: 'https://eliram9.github.io/QuickestWay/'
                 },
                 {
                     name: 'PortFolio',
                     img: require('../assets/portfolio.png'),
+                    tools: [
+                            require('../assets/react.png')
+                    ],
                     description: 'great',
                     link: 'https://github.com/eliram9/react_portfolio'
                 }
@@ -118,7 +139,8 @@ export default {
     }
 
     .img-build {
-        width: 50px;
+        width: 3vmax;
+        margin-left: 1%
     }
 
     .theme--light.v-sheet:hover {
