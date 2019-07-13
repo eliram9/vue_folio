@@ -1,15 +1,15 @@
 <template>
     <div id="about">
-        <h2 class="display-3">About</h2>
+        <h2 class="display-3">Ab<sapn class="o">o</sapn>ut</h2>
             <v-container fluid>
                 <v-layout row align-center>
-                        <v-flex xs10 lg6 xl5> 
+                        <v-flex xs8 md10 lg6 xl5> 
                             <v-card flat color="#fefffa">
                                 <a><img src="../assets/me.png" alt="me"></a>
                             </v-card>   
                         </v-flex>
 
-                        <v-flex xs12 lg5 xl6> 
+                        <v-flex xs12 md10 lg5 xl6> 
                             <v-card flat color="#fefffa">
                                 <h1>I'm Eliram,</h1>
                                 <h1>A Front-End & UI/UX Developer. 
@@ -118,12 +118,19 @@ export default {
 
 <style scoped>
     #about {
-        min-height: 95vh;
+        min-height: 100vh;
         background-color: #fefffa !important;
     }
 
     .display-3 {
+        color: #78909C;
+        padding-top: 4.5%;
+        font-size: 4vmax !important;
         font-family: 'Poiret One', cursive !important;
+    }
+
+    .o {
+        color: #FFAB91;
     }
 
     img {
@@ -131,9 +138,10 @@ export default {
     }
 
     h1 {
+        color: #78909C;
         font-size: 2.9vmax;
         font-family: 'Dosis', sans-serif;
-        font-weight: 100;
+        font-weight: 300;
     }
 
     /* Technologies */

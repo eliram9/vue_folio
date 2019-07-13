@@ -1,6 +1,6 @@
 <template>
     <div id="projects">
-        <h2 class="display-3">Projects</h2>
+        <h2 class="display-3">Pr<sapn class="o">o</sapn>jects</h2>
         <br />
         
             <v-container fluid>
@@ -10,22 +10,30 @@
                             <v-timeline-item 
                                 v-for="project in projects"
                                 :key= project
-                                color="red lighten-2"
+                                color="#FFAB91"
                                 small
                             > 
                                 <template v-slot:opposite>
-                                    <span><h1>{{ project.name }}</h1></span>
+                                    <span><h3>{{ project.name }}</h3></span>
                                 </template>
                                     <v-card flat>
                                         <!-- <v-card-title class="headline">Hi</v-card-title> -->
                                         <img v-bind:src="project.img"> 
-                                            <v-card-text>
+                                        <v-card-text>
                                             {{ project.description }}
                                         </v-card-text>
+
                                         <p>built with</p>
+                                        <img class="img-build" 
+                                             v-bind:src="project.tools"
+                                        >
+
                                         <br>
-                                        <v-btn>Live App</v-btn>
-                                    </v-card>
+                                    </v-card> 
+                                        <a v-bind:href="project.link" 
+                                           class="liveApp">
+                                            Live App
+                                        </a> 
                             </v-timeline-item>
                         </v-timeline>
                     </v-flex>
@@ -42,30 +50,30 @@ export default {
                 {
                     name: 'CryptoReact',
                     img: require('../assets/crypto.png'),
+                    tools: require('../assets/css.png'), 
                     description: 'amazing',
-                    build: 'vue',
-                    link: 'https://www.google.com'
+                    link: 'https://eliram9.github.io/cryptoreact/'
                 },
                 {
-                    name: 'crypto',
+                    name: 'Cryptocurrrnecy',
                     img: require('../assets/oldCrypto.png'),
+                    tools: require('../assets/react.png'),
                     description: 'old',
-                    build: 'vue',
-                    link: 'https://www.google.com'
+                    link: 'https://eliram9.github.io/crypto/'
                 },
                 {
                     name: 'QuickestWay',
                     img: require('../assets/navi.png'),
                     description: 'fast',
-                    build: 'vue',
-                    link: 'https://www.google.com'
+                    link: 'https://eliram9.github.io/QuickestWay/'
                 },
                 {
                     name: 'PortFolio',
                     img: require('../assets/portfolio.png'),
                     description: 'great',
+                    link: 'https://github.com/eliram9/react_portfolio'
                 }
-            ]    
+            ]
         }
     }
 }
@@ -77,12 +85,44 @@ export default {
         background-color: #fefffa;
     }
 
+    /* Cards */
     .display-3 {
+        color: #78909C;
+        padding-top: 4.5%;
+        font-size: 4vmax !important;
         font-family: 'Poiret One', cursive !important;
-        float: left;
+    }
+
+    .o {
+        color: #FFAB91;
+    }
+
+    h3 {
+        color:#78909C; 
+        font-size: 2vmax;
+        font-family: 'Dosis', sans-serif;
     }
 
     img{
-        width: 15vmax;
+        width: 13vmax;
+    }
+
+    .liveApp {
+        color: #80CBC4;
+        font-size: 2.5vmin;
+        text-decoration: none;
+    }
+
+    .v-timeline-item .v-card:before, .v-timeline-item .v-card:after {
+        position: fixed !important; 
+    }
+
+    .img-build {
+        width: 50px;
+    }
+
+    .theme--light.v-sheet:hover {
+        background-color: red;
+        opacity: .1;
     }
 </style>

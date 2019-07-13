@@ -4,10 +4,10 @@
     <Toolbar />
     <About />
         <br />
-    <hr />
+    <!-- <hr /> -->
         <br />
     <Projects />
-    <hr />
+    <!-- <hr /> -->
         <br />
     <contact /> 
     <!-- <hr /> -->
@@ -37,7 +37,7 @@ export default {
 }
 </script>
 
-<style>
+<style scope>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

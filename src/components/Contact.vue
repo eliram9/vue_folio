@@ -1,13 +1,13 @@
 <template>
     <div id=contact>
-        <h2 class="display-3">Contact</h2>
+        <h2 class="display-3">C<sapn class="o">o</sapn>ntact</h2>
             <v-container fill-height>
                 <v-layout >
                     <v-flex>
                         <a v-bind:href="github"><img src="../assets/git.png" alt="git"></a>
                         <a :href="linkedin"><img src="../assets/linked.png"></a>
                         <a :href="instagram"><img src="../assets/insta.png"></a>
-                        <img src="../assets/mail.png">
+                        <a :href="mail"><img src="../assets/mail.png"></a>
                     </v-flex>
                 </v-layout>
             </v-container>
@@ -20,7 +20,8 @@ export default {
         return {
             github: 'https://github.com/eliram9',
             linkedin: 'https://www.linkedin.com/in/eliram9/',
-            instagram: 'https://www.instagram.com/eliramalachi/?hl=en'
+            instagram: 'https://www.instagram.com/eliramalachi/?hl=en',
+            mail: 'mailto:eliram9@gmail.com'
         }
     }
 }
@@ -33,11 +34,16 @@ export default {
     }
 
     .display-3 {
+        color: #78909C;
         font-family: 'Poiret One', cursive !important;
     }
 
+    .o {
+        color: #FFAB91;
+    }
+
     img {
-        max-width: 3.5vmax;
+        max-width: 4vmax;
         margin: 1% 1%;
     }
 </style>
