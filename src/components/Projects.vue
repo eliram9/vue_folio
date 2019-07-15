@@ -1,6 +1,6 @@
 <template>
     <div id="projects">
-        <h2 class="display-3">Pr<sapn class="o">o</sapn>jects</h2>
+        <h2 class="display-3">Pr<span class="o">o</span>jects</h2>
         <br />
         
             <v-container fluid>
@@ -8,8 +8,8 @@
                     <v-flex xs12 sm12 md10 lg8 xl6>
                         <v-timeline>
                             <v-timeline-item 
-                                v-for="project in projects"
-                                :key= project
+                                v-for="(project, index) in projects"
+                                :key= index
                                 color="#FFAB91"
                                 small
                             > 
@@ -31,6 +31,7 @@
 
                                         <br>
                                     </v-card> 
+                                        <br>
                                         <a v-bind:href="project.link" 
                                            class="liveApp">
                                             Live App
@@ -54,13 +55,13 @@ export default {
                     tools: [
                             require('../assets/react.png'),
                             require('../assets/api.png'),
-                            require('../assets/mate1.png')
+                            require('../assets/mate.png')
                     ], 
                     description: 'amazing',
                     link: 'https://eliram9.github.io/cryptoreact/'
                 },
                 {
-                    name: 'Cryptocurrrnecy',
+                    name: 'Cryptocurrency',
                     img: require('../assets/oldCrypto.png'),
                     tools: [
                             require('../assets/html.png'),
@@ -87,7 +88,7 @@ export default {
                 },
                 {
                     name: 'PortFolio',
-                    img: require('../assets/portfolio.png'),
+                    img: require('../assets/portfo.png'),
                     tools: [
                             require('../assets/react.png')
                     ],
@@ -139,7 +140,7 @@ export default {
     }
 
     .img-build {
-        width: 3vmax;
+        width: 2.5vmax;
         margin-left: 1%
     }
 

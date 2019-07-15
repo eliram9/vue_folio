@@ -1,6 +1,6 @@
 <template>
     <div id="about">
-        <h2 class="display-3">Ab<sapn class="o">o</sapn>ut</h2>
+        <h2 class="display-3">Ab<span class="o">o</span>ut</h2>
             <v-container fluid>
                 <v-layout row align-center>
                         <v-flex xs8 md10 lg6 xl5> 
@@ -19,6 +19,27 @@
                             </v-card>   
                         </v-flex>
                 </v-layout>
+
+                <!-- Progress skills -->
+                        <v-layout row justify-center>
+                                <v-flex xs12 sm12 md10 lg8 xl7>
+                                    <v-card flat color="grey">
+                                        <div class="text-xs-center">
+                                            <span v-for="(skill, index) in skills" :key="index">
+                                                <v-progress-circular
+                                                    :rotate="360"
+                                                    :size="100"
+                                                    :width="3"
+                                                    :value="skill.value"
+                                                    :color="skill.color"
+                                                    >
+                                                    {{ skill.tech }}
+                                                </v-progress-circular>
+                                            </span>
+                                        </div>
+                                    </v-card>
+                                </v-flex>
+                        </v-layout>
             </v-container> 
 
             <div class="showMore">
@@ -101,14 +122,68 @@
 </template>
 
 <script>
+import { setInterval, clearInterval } from 'timers';
 export default {
     data () {
         return {
             showMore: false,
-            techo: '< Technologies />'
+            techo: '< Technologies />',
+            // Progress skills
+            interval: {},
+            value: 0,
+            skills: [
+                {
+                    tech: 'java',
+                    color: "red",
+                    value: 0,
+                    maxValue: 50
+                },
+                {
+                    tech: 'html',
+                    color: 'black',
+                    value: 0,
+                    maxValue: 80
+                },
+                {
+                    tech: 'JS',
+                    color: "green",
+                    value: 0,
+                    maxValue: 20
+                },
+                {
+                    tech: 'CSS',
+                    color: 'yellow',
+                    value: 0,
+                    maxValue: 30
+                }
+            ]    
         }
     },
+
+    beforeDestroy () {
+      clearInterval(this.interval)
+    },
+
+    mounted () {
+        Object.keys(this.skills).forEach(key => {
+            let val = this.skills[key]
+            //console.log(val.value);
+
+            this.interval = setInterval(() => {
+                if (this.skills[key].value === val.maxValue) { 
+                    //clear before next iteration
+                    // clearInterval(this.interval);
+
+                    //replaced the return statement
+                    return
+                }
+                this.skills[key].value += 5
+            }, 50)
+        });
+    },
+
     methods: {
+        // Toggle button
         toggle() {
            this.showMore = !this.showMore
         }
@@ -142,6 +217,12 @@ export default {
         font-size: 2.9vmax;
         font-family: 'Dosis', sans-serif;
         font-weight: 300;
+    }
+
+    /* Progress skills */
+    .v-progress-circular {
+        width: 10vmax !important;
+        margin: 0 1.5rem 0 1.5rem;
     }
 
     /* Technologies */

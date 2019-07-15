@@ -29,7 +29,7 @@
         :particlesNumber="80"
         shapeType="circle"
         :particleSize="3"
-        linesColor="#dedede"
+        linesColor="#C7C7C7"
         :linesWidth="1"
         :lineLinked="true"
         :lineOpacity="0.4"

@@ -1,6 +1,6 @@
 <template>
     <div id=contact>
-        <h2 class="display-3">C<sapn class="o">o</sapn>ntact</h2>
+        <h2 class="display-3">C<span class="o">o</span>ntact</h2>
             <v-container fill-height>
                 <v-layout >
                     <v-flex>
