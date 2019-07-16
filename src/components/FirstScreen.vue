@@ -13,7 +13,9 @@
             
         </h1>
 
-           <h1 class="line anim-typewriter"> I'm a Front-End & UI/UX Developer</h1>
+           <h1 class="line anim-typewriter"> I'm a <span class="front">{{ front }}</span> & 
+                <span class="uiux">U<span class="oc">I</span>/<span class="oc">U</span>X</span> 
+                Developer</h1>
                 <!-- <br>    
                     <v-btn large 
                            outline
@@ -23,8 +25,13 @@
                            class="explore">
                            Explore
                     </v-btn> -->
+        
        <vue-particles
         color="#FFAB91"
+        position="absolute"
+        z-index="-1"
+        top="-50"
+        left="0"
         :particleOpacity="0.7"
         :particlesNumber="80"
         shapeType="circle"
@@ -51,7 +58,8 @@
 
         data() {
             return {
-                url: 'https://www.google.com'
+                url: 'https://www.google.com',
+                front: '< Front-End />'
             }
         }
     }
@@ -63,7 +71,12 @@
         height: 100vh;
         background-color: #fefffa;
     }
-
+    /* .particles {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+    } */
     .name{
         color: #B2DFDB;
     }
@@ -110,8 +123,9 @@
     }  
 
     .anim-typewriter {
-       animation: typewriter 4s steps(30) 1s 1 normal both,
-       blinkTextCursor 500ms steps(30) infinite normal;
+        transition-delay: 1s;
+        animation: typewriter 4s steps(30) 1s 1 normal both,
+        blinkTextCursor 500ms steps(30) infinite normal;
     } 
 
     @keyframes typewriter {
@@ -119,7 +133,7 @@
             width: 0;
         }
         to {
-            width: 13.2em;
+            width: 14.7em;
         }
     }
     @keyframes blinkTextCursor {
@@ -129,6 +143,18 @@
         to {
             border-right-color: transparent;
         }
+    }
+
+    .front {
+       font-weight: bold;
+    }
+    .uiux {
+        transition-delay: 2.5s;
+        font-weight: bold;
+        text-shadow: 3px 2px #B2DFDB;
+    }
+    .oc {
+        text-shadow: 3px 2px #FFAB91;
     }
 
     .explore {

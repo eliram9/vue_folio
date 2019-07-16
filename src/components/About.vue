@@ -21,19 +21,22 @@
                 </v-layout>
 
                 <!-- Progress skills -->
-                        <v-layout row justify-center>
-                                <v-flex xs12 sm12 md10 lg8 xl7>
-                                    <v-card flat color="grey">
+                        <v-layout row 
+                                  justify-center 
+                                  v-scroll="handleScroll"
+                        >
+                                <v-flex xs12 sm12 md12 lg9 xl8>
+                                    <v-card flat color="#fefffa">
                                         <div class="text-xs-center">
                                             <span v-for="(skill, index) in skills" :key="index">
                                                 <v-progress-circular
                                                     :rotate="360"
-                                                    :size="100"
-                                                    :width="3"
+                                                    :size="110"
+                                                    :width="5"
                                                     :value="skill.value"
                                                     :color="skill.color"
-                                                    >
-                                                    {{ skill.tech }}
+                                                >
+                                                    <span class="skill-tech">{{ skill.tech }}</span>
                                                 </v-progress-circular>
                                             </span>
                                         </div>
@@ -123,6 +126,7 @@
 
 <script>
 import { setInterval, clearInterval } from 'timers';
+
 export default {
     data () {
         return {
@@ -133,59 +137,90 @@ export default {
             value: 0,
             skills: [
                 {
-                    tech: 'java',
-                    color: "red",
-                    value: 0,
-                    maxValue: 50
-                },
-                {
-                    tech: 'html',
-                    color: 'black',
+                    tech: 'HTML5',
+                    color: "#FFAB91",
                     value: 0,
                     maxValue: 80
                 },
                 {
-                    tech: 'JS',
-                    color: "green",
+                    tech: 'CSS3',
+                    color: '#FFAB91',
                     value: 0,
-                    maxValue: 20
+                    maxValue: 70
                 },
                 {
-                    tech: 'CSS',
-                    color: 'yellow',
+                    tech: 'JS',
+                    color: "#FFAB91",
+                    value: 0,
+                    maxValue: 50
+                },
+                {
+                    tech: 'VUE',
+                    color: '#FFAB91',
                     value: 0,
                     maxValue: 30
+                },
+                {
+                    tech: 'REACT',
+                    color: "#FFAB91",
+                    value: 0,
+                    maxValue: 30
+                },
+                {
+                    tech: 'UI',
+                    color: "#FFAB91",
+                    value: 0,
+                    maxValue: 60
                 }
             ]    
         }
     },
 
-    beforeDestroy () {
-      clearInterval(this.interval)
-    },
-
     mounted () {
-        Object.keys(this.skills).forEach(key => {
-            let val = this.skills[key]
-            //console.log(val.value);
+        // Object.keys(this.skills).forEach(key => {
+        //     let val = this.skills[key]
+        //     //console.log(val.value);
 
-            this.interval = setInterval(() => {
-                if (this.skills[key].value === val.maxValue) { 
-                    //clear before next iteration
-                    // clearInterval(this.interval);
+        //     this.interval = setInterval(() => {
+        //         if (this.skills[key].value === val.maxValue) { 
 
-                    //replaced the return statement
-                    return
-                }
-                this.skills[key].value += 5
-            }, 50)
-        });
+        //             return
+        //         }
+        //         this.skills[key].value += 5
+        //     }, 50)
+        // });
     },
 
     methods: {
         // Toggle button
         toggle() {
            this.showMore = !this.showMore
+        },
+
+        // this function will be fired after the user scrolls down
+        handleScroll (event) {
+            Object.keys(this.skills).forEach(key => {
+            let val = this.skills[key]
+                //console.log(val.value);
+
+            this.interval = setInterval(() => {
+                if (this.skills[key].value === val.maxValue) { 
+                    return
+                }
+                this.skills[key].value += 5
+                }, 50)
+
+            // this.setTimeout(() => {
+                
+            // }, timeout);
+               
+            });
+        },
+        created () {
+            window.addEventListener('scroll', this.handleScroll);
+        },
+        destroyed () {
+            window.removeEventListener('scroll', this.handleScroll);
         }
     }
 }
@@ -222,7 +257,7 @@ export default {
     /* Progress skills */
     .v-progress-circular {
         width: 10vmax !important;
-        margin: 0 1.5rem 0 1.5rem;
+        margin: 0 .5rem 0 .5rem;
     }
 
     /* Technologies */
@@ -250,6 +285,13 @@ export default {
     }
     .row5 {
         color: #FFCC80;
+    }
+    .skill-tech {
+        color: #78909c;
+        font-size: 1.2vmax;
+        transition-delay: 1s;
+        font-weight: bolder;
+        font-family: 'Dosis', sans-serif;
     }
 </style>
 

@@ -87,7 +87,7 @@ export default {
                     link: 'https://eliram9.github.io/QuickestWay/'
                 },
                 {
-                    name: 'PortFolio',
+                    name: 'ReactFolio',
                     img: require('../assets/portfo.png'),
                     tools: [
                             require('../assets/react.png')
