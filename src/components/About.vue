@@ -203,16 +203,17 @@ export default {
             let val = this.skills[key]
                 //console.log(val.value);
 
-            this.interval = setInterval(() => {
-                if (this.skills[key].value === val.maxValue) { 
-                    return
-                }
-                this.skills[key].value += 5
-                }, 50)
+                // only after 2 seconds the bar will start to "move".
+                setTimeout(() => {
 
-            // this.setTimeout(() => {
-                
-            // }, timeout);
+                this.interval = setInterval(() => {
+                    if (this.skills[key].value === val.maxValue) { 
+                        return
+                    }
+                    this.skills[key].value += 10
+                    }, 50)
+
+                }, 1500);
                
             });
         },
