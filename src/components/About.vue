@@ -20,6 +20,7 @@
                         </v-flex>
                 </v-layout>
 
+                
                 <!-- Progress skills -->
                         <v-layout row 
                                   justify-center 
@@ -28,17 +29,18 @@
                                 <v-flex xs12 sm12 md12 lg9 xl8>
                                     <v-card flat color="#fefffa">
                                         <div class="text-xs-center">
-                                            <span v-for="(skill, index) in skills" :key="index">
-                                                <v-progress-circular
-                                                    :rotate="360"
-                                                    :size="110"
-                                                    :width="5"
-                                                    :value="skill.value"
-                                                    :color="skill.color"
-                                                >
-                                                    <span class="skill-tech">{{ skill.tech }}</span>
-                                                </v-progress-circular>
-                                            </span>
+                                            <h2 class="skillsTitle">Skills</h2>
+                                                <span v-for="(skill, index) in skills" :key="index">
+                                                    <v-progress-circular
+                                                        :rotate="360"
+                                                        :size="110"
+                                                        :width="5"
+                                                        :value="skill.value"
+                                                        :color="skill.color"
+                                                    >
+                                                        <span class="skill-tech">{{ skill.tech }}</span>
+                                                    </v-progress-circular>
+                                                </span>
                                         </div>
                                     </v-card>
                                 </v-flex>
@@ -250,12 +252,20 @@ export default {
 
     h1 {
         color: #78909C;
-        font-size: 2.9vmax;
+        font-size: 2.5vmax;
         font-family: 'Dosis', sans-serif;
         font-weight: 300;
     }
 
     /* Progress skills */
+    .skillsTitle {
+        color: #78909C;
+        padding-top: 1%;
+        padding-bottom: 2%;
+        font-size: 1.9vmax;
+        font-family: 'Poiret One', cursive !important;
+    }
+    
     .v-progress-circular {
         width: 10vmax !important;
         margin: 0 .5rem 0 .5rem;

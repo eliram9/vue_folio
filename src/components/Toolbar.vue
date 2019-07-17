@@ -45,5 +45,6 @@ export default {
         background-color: rgba(255, 171, 145, 0.342);
         color: white;
         transform: rotateZ(-30deg);
+        height: 50%;
     }  
 </style>
