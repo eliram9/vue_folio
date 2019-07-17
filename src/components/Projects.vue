@@ -16,21 +16,33 @@
                                 <template v-slot:opposite>
                                     <span><h3>{{ project.name }}</h3></span>
                                 </template>
-                                    <v-card flat>
-                                        <!-- <v-card-title class="headline">Hi</v-card-title> -->
+                                <v-hover > 
+                                    <v-card flat slot-scope={hover}>
                                         <img v-bind:src="project.img"> 
-                                        <v-card-text>
-                                            {{ project.description }}
-                                        </v-card-text>
 
-                                        <p>built with</p>
-                                        <span v-for="tool in project.tools" :key=tool>
-                                            <img class="img-build" 
-                                                v-bind:src="tool" />
-                                        </span>
+                                        <!-- card expand after user hover -->
+                                        <v-expand-transition>
+                                            <div
+                                                v-if="hover"
+                                                class="d-flex transition-fast-in-fast-out 
+                                                       blue-grey lighten-2 v-card--reveal 
+                                                       white--text"
+                                                style="height: 100%;"
+                                            >
+                                                <v-card-text>
+                                                    {{ project.description }}
+                                                </v-card-text>
+                                            </div>
+                                        </v-expand-transition>
+                                        <!-- /end -->
 
+                                        <p class="builtTitle">Built with</p>
+                                            <span v-for="tool in project.tools" :key=tool>
+                                                <img class="img-build" v-bind:src="tool" />
+                                            </span>
                                         <br>
                                     </v-card> 
+                                </v-hover>    
                                         <br>
                                         <a v-bind:href="project.link" 
                                            class="liveApp">
@@ -57,7 +69,7 @@ export default {
                             require('../assets/api.png'),
                             require('../assets/mate.png')
                     ], 
-                    description: 'amazing',
+                    description: 'A simple web application that shows my favorite crypto-currency coin prices in real time. built with react.js',
                     link: 'https://eliram9.github.io/cryptoreact/'
                 },
                 {
@@ -70,7 +82,7 @@ export default {
                             require('../assets/api.png'),
                             require('../assets/boot.png')    
                     ],
-                    description: 'old',
+                    description: 'My favorive crypto coins rate in real time',
                     link: 'https://eliram9.github.io/crypto/'
                 },
                 {
@@ -83,7 +95,7 @@ export default {
                             require('../assets/api.png'),
                             require('../assets/boot.png')    
                     ],
-                    description: 'fast',
+                    description: 'Web Application for the quickest route comparing between Bing, Google and MapQuest GPS on one page.',
                     link: 'https://eliram9.github.io/QuickestWay/'
                 },
                 {
@@ -92,7 +104,7 @@ export default {
                     tools: [
                             require('../assets/react.png')
                     ],
-                    description: 'great',
+                    description: 'Free Portfolio template for web developers',
                     link: 'https://github.com/eliram9/react_portfolio'
                 }
             ]
@@ -128,7 +140,7 @@ export default {
     img{
         width: 13vmax;
     }
-
+    
     .liveApp {
         color: #80CBC4;
         font-size: 2.5vmin;
@@ -144,8 +156,26 @@ export default {
         margin-left: 1%
     }
 
-    .theme--light.v-sheet:hover {
-        background-color: red;
-        opacity: .1;
+    .v-card--reveal {
+        align-items: center;
+        bottom: 0;
+        justify-content: center;
+        opacity: .85;
+        position: absolute;
+        width: 100%;
+        border-radius: 12%; 
+        
+    }
+    .d-flex {
+        font-size: 1.5vmax;
+        font-weight: bold;
+        font-family: 'Dosis', sans-serif;
+        /* padding: 15% 5% 7% 15%; */
+    }
+    .builtTitle {
+        margin-top: 10%;
+        color:#78909C; 
+        font-size: 1.1vmax;
+        font-family: 'Dosis', sans-serif;
     }
 </style>

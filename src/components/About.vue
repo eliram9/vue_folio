@@ -213,7 +213,7 @@ export default {
                     this.skills[key].value += 10
                     }, 50)
 
-                }, 2100);
+                }, 2000);
                
             });
         },
