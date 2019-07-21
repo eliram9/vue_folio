@@ -105,8 +105,7 @@
                                                         <span class="row5">|</span> GitHub 
                                                         <span class="row5">|</span> Bitbucket
                                                 </h3> 
-                                            <br>    
-                                                    
+                                            <br>        
                                     </v-card> 
                                 </v-flex>
                             </v-layout>
@@ -215,7 +214,7 @@ export default {
                     this.skills[key].value += 10
                     }, 50)
 
-                }, 2000);
+                }, 1800);
                
             });
         },

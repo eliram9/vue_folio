@@ -13,11 +13,11 @@
             
         </h1>
 
-           <h1 class="line anim-typewriter"> I'm a <span class="front">{{ front }}</span> & 
+           <h1 class="line anim-typewriter"> I'm a <span class="front">{{ front }}</span> Front-End <span class="front">{{ front2 }}</span> & 
                 <span class="uiux">U<span class="oc">I</span>/<span class="oc">U</span>X</span> 
                 Developer</h1>
-                <!-- <br>    
-                    <v-btn large 
+                <br>    
+                    <!-- <v-btn large 
                            outline
                            fab 
                            href="#about" 
@@ -29,13 +29,12 @@
        <vue-particles
         color="#FFAB91"
         position="absolute"
-        z-index="-1"
-        top="-50"
+        z-index="0"
         left="0"
         :particleOpacity="0.7"
         :particlesNumber="80"
         shapeType="circle"
-        :particleSize="3"
+        :particleSize="4"
         linesColor="#C7C7C7"
         :linesWidth="1"
         :lineLinked="true"
@@ -59,7 +58,8 @@
         data() {
             return {
                 url: 'https://www.google.com',
-                front: '< Front-End />'
+                front: '<',
+                front2: '/>'
             }
         }
     }
@@ -71,12 +71,14 @@
         height: 100vh;
         background-color: #fefffa;
     }
-    /* .particles {
+
+    #particles-js {
         position: absolute;
-        z-index: -1;
+        z-index: 0;
         top: 0;
         left: 0;
-    } */
+    }
+
     .name{
         color: #B2DFDB;
     }
@@ -89,7 +91,7 @@
         position: relative;
         top: 50%;
         margin: 0 auto;
-        font-size: 3vmax;
+        font-size: 3.1vmax;
         text-align: center;
         transform: translateY(-180%);
         color: #78909C;
@@ -150,11 +152,10 @@
     }
     .uiux {
         transition-delay: 2.5s;
-        font-weight: bold;
-        text-shadow: 3px 2px #B2DFDB;
+        text-shadow: 2.5px 1.5px #B2DFDB;
     }
     .oc {
-        text-shadow: 3px 2px #FFAB91;
+        text-shadow: 2.5px 1.5px #FFAB91;
     }
 
     .explore {
@@ -162,6 +163,7 @@
         text-align: center;
         color: #78909C;
         font-weight: 600;
+        position: relative;
         font-family: 'Dosis', sans-serif;
     }    
 

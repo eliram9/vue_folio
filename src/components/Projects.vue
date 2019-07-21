@@ -67,7 +67,7 @@ export default {
                     tools: [
                             require('../assets/react.png'),
                             require('../assets/api.png'),
-                            require('../assets/mate.png')
+                            // require('../assets/mate.png')
                     ], 
                     description: 'A simple web application that shows my favorite crypto-currency coin prices in real time. built with react.js',
                     link: 'https://eliram9.github.io/cryptoreact/'
@@ -145,6 +145,10 @@ export default {
         color: #80CBC4;
         font-size: 2.5vmin;
         text-decoration: none;
+    }
+
+    .theme--light.v-sheet {
+        background-color: #fefffa;
     }
 
     .v-timeline-item .v-card:before, .v-timeline-item .v-card:after {
