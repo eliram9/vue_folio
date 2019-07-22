@@ -28,13 +28,10 @@
         
        <vue-particles
         color="#FFAB91"
-        position="absolute"
-        z-index="0"
-        left="0"
         :particleOpacity="0.7"
         :particlesNumber="80"
         shapeType="circle"
-        :particleSize="4"
+        :particleSize="3"
         linesColor="#C7C7C7"
         :linesWidth="1"
         :lineLinked="true"
@@ -76,7 +73,7 @@
         position: absolute;
         z-index: 0;
         top: 0;
-        left: 0;
+        width: 100vw;
     }
 
     .name{
