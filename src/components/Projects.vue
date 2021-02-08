@@ -83,7 +83,7 @@ export default {
                             require('../assets/boot.png')    
                     ],
                     description: 'My favorive crypto coins rate in real time',
-                    link: 'https://eliram9.github.io/crypto/'
+                    link: 'https://eliram9.github.io/new_cryptoreact/'
                 },
                 {
                     name: 'QuickestWay',
