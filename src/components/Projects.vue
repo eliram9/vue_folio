@@ -70,7 +70,7 @@ export default {
                             // require('../assets/mate.png')
                     ], 
                     description: 'A simple web application that shows my favorite crypto-currency coin prices in real time. built with react.js',
-                    link: 'https://eliram9.github.io/cryptoreact/'
+                    link: 'https://eliram9.github.io/new_cryptoreact/'
                 },
                 {
                     name: 'Cryptocurrency',
@@ -83,7 +83,7 @@ export default {
                             require('../assets/boot.png')    
                     ],
                     description: 'My favorive crypto coins rate in real time',
-                    link: 'https://eliram9.github.io/new_cryptoreact/'
+                    link: 'https://eliram9.github.io/crypto/'
                 },
                 {
                     name: 'QuickestWay',
@@ -106,6 +106,14 @@ export default {
                     ],
                     description: 'Free Portfolio template for web developers',
                     link: 'https://github.com/eliram9/react_portfolio'
+                },
+                {
+                    name: 'FireAuth',
+                    img: require('../assets/profile.png'),
+                    tools: [
+                            require('../assets/react.png')
+                    ],
+                    description: 'User Authontication with React.js & firebase, coming soon...'
                 }
             ]
         }
